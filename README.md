@@ -12,4 +12,4 @@
 
 ## Wordlists
 
-[git-hub dorks]
+[git-hub dorks](/wordlists/github-dorks)
