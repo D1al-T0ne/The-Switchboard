@@ -1,6 +1,6 @@
 # Bug-Hunter
 
- ## The Tool-Box
+ ## The-Tool-Box
 
 | Tool | Description |
 | --- | --- |
