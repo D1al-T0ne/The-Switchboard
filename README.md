@@ -16,3 +16,4 @@
 ## Wordlists
 
 [git-hub dorks](/wordlists/github-dorks)
+[subdomain names](/wordlist/subdomain-names)
