@@ -5,6 +5,7 @@
 | Tool | Description |
 | --- | --- |
 | [amass](https://github.com/OWASP/Amass)| The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques. |
+| [dirsearch](https://github.com/maurosoria/dirsearch) | Dirsearch is a mature command-line tool designed to brute force directories and files in webservers. |
 | [ffuf](https://github.com/ffuf/ffuf/blob/master/README.md) | FFUF is an Open Source web fuzzing tool, intended for discovering elements and content within web applciations, or web servers. |
 | [gau](https://github.com/lc/gau) | getallurls (gau) fetches known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain. Inspired by Tomnomnom's waybackurls.|
 | [httprobe](https://github.com/tomnomnom/httprobe)| HTTProbe takes a list of domains and probes for working http and https servers. |
