@@ -15,7 +15,7 @@
 | [nikto](https://cirt.net/Nikto2) | Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items. |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | Nuclei is used to send requests across targets based on a template leading to zero false positives and providing effective scanning for known paths. |
 | [sublist3r](https://github.com/aboul3la/Sublist3r) | Sublist3r is a python tool designed to enumerate subdomains of websites using OSINT. subbrute was integrated with Sublist3r to increase the possibility of finding more subdomains using bruteforce with an improved wordlist. |
-| [whatweb](https://github.com/urbanadventurer/WhatWeb/blob/master/README.md) | WhatWeb recognises web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices. |
+
 
 
 
