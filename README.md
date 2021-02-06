@@ -24,4 +24,4 @@
 ## Wordlists
 
 - [git-hub dorks](/wordlists/github-dorks)
-- [subdomain names](/wordlists/subdomain-names)
+- [extensions](/wordlists/extensions)
