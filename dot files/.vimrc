@@ -8,10 +8,12 @@ set clipboard=unnamed
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 
+" Display the Status Line
+set laststatus=2
 " Line Numbers
 set number
 " Shows Cursor Position
-set Ruler
+set ruler
 " Syntax Highlghting
 syntax on
 " Show the Commmand
@@ -31,6 +33,8 @@ set ts=4
 inoremap kj <Esc>
 " Disable Error Bell
 set noerrorbells
+" Turn off Start-up Message
+set shortmess=at
 
 " Change Mapleader
 
