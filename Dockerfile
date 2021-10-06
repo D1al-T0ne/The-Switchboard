@@ -104,6 +104,11 @@ RUN git clone https://github.com/GerbenJavado/LinkFinder.git $TOOLS/linkfinder &
 	cd $TOOLS/linkfinder && \
 	python3 setup.py install && \
 	pip3 install -r requirements.txt
+	
+# massdns
+RUN git clone https://github.com/blechschmidt/massdns $TOOLS/massdns && \
+	cd $TOOLS/massdns && \
+	make
 
 # meg
 #RUN wget https://github.com/tomnomnom/meg/releases/download/v0.2.4/meg-linux-amd64-0.2.4.tgz && \
@@ -115,17 +120,6 @@ RUN git clone https://github.com/GerbenJavado/LinkFinder.git $TOOLS/linkfinder &
 RUN git clone https://github.com/m4ll0k/SecretFinder.git $TOOLS/secretfinder && \
 	cd $TOOLS/secretfinder && \
 	pip3 install -r requirements.txt
-
-# subfinder
-RUN go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
-
-#sublister
-RUN git clone --depth 1 https://github.com/aboul3la/Sublist3r.git $TOOLS/sublist3r && \
-	cd $TOOLS/sublist3r && \
-	python3 -m pip install -r requirements.txt && \
-	sed -i 's^#!/usr/bin/env python^#!/usr/bin/python3^g' sublist3r.py && \
-	chmod a+x sublist3r.py && \
-	ln -sf $TOOLS/sublist3r/sublist3r.py /usr/local/bin/sublist3r
 
 # ----------------------
 # Wordlists
