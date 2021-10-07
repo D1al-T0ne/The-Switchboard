@@ -10,6 +10,7 @@
 | [ffuf](https://github.com/ffuf/ffuf/blob/master/README.md) | FFUF is an Open Source web fuzzing tool, intended for discovering elements and content within web applciations, or web servers. |
 | [gau](https://github.com/lc/gau) | getallurls (gau) fetches known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain. Inspired by Tomnomnom's waybackurls.|
 | [httprobe](https://github.com/tomnomnom/httprobe) | HTTProbe takes a list of domains and probes for working http and https servers. |
+| [kiterunner](https://github.com/assetnote/kiterunner) | Kiterunner is a tool that is capable of not only performing traditional content discovery at lightning fast speeds, but also bruteforcing routes/endpoints in modern applications. |
 | [linkfinder](https://github.com/GerbenJavado/LinkFinder) | LinkFinder is a python script written to discover endpoints and their parameters in JavaScript files. |
 | [massdns](https://github.com/blechschmidt/massdns) | MassDNS is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions. Without special configuration, MassDNS is capable of resolving over 350,000 names per second using publicly available resolvers. |
 | [meg](https://github.com/tomnomnom/meg) | meg is a tool for fetching lots of URLs but still being 'nice' to servers. |
