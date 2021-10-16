@@ -1,6 +1,21 @@
 # The-Switchboard
----
- ## Tools
+
+## Info
+An Ubuntu image run in a Docker container, with a collection of tools and more for CTF-Challenges and Bug Bounty.
+
+## Instructions
+I created an alias to run the image.
+
+```bash
+alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --rm swithcboard'
+# "cd ~/switchboard"
+# Moves you into the directory "switchboard" (this must be created and have the Dockerfile).
+# "docker run. -v ~/switchboard:/srv/
+# This gives persistant storage.
+# "--it --rm swithchboard"
+# Running the image with "--rm" is away to keep things clean after the image is shutdown.
+```
+## Tools
 
 | Tool | Description |
 | --- | --- |
@@ -16,5 +31,11 @@
 | [meg](https://github.com/tomnomnom/meg) | meg is a tool for fetching lots of URLs but still being 'nice' to servers. |
 | [nmap](https://nmap.org/) | Nmap is a free and open source utility for network security and auditing. |
 | [vhostscan](https://github.com/codingo/VHostScan) | VHostScan A virtual host scanner that can be used with pivot tools, detect catch-all scenarios, aliases and dynamic default pages. |
+
+## Todo
+ - Create an alias file
+ - Add dotfiles
+ - Update tool versions in Dockerfile
+ - Wordlists
 
 ---
