@@ -115,5 +115,5 @@ RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-larg
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-words-lowercase.txt
 
 # Config
-RUN wget -O ~/.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dot%20files/.vimrc
-RUN wget -O ~/.bash_aliases https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dot%20files/.bash_aliases
+RUN wget -O /.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dot%20files/.vimrc
+RUN wget -O /.bash_aliases https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dot%20files/.bash_aliases
