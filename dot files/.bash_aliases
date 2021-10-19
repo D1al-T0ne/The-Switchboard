@@ -1,5 +1,6 @@
 vhost_ffuf(){
-  
+  name=$(echo $1 | cut -d '/' -f3)
+  ffuf -c -u $1 -H "Host: FUZZ" -H "User-Agent: " -w vhost.txt -ac -mc all -fc 400,404
 }
 
 linkfinder(){
