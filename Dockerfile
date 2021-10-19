@@ -1,8 +1,6 @@
 FROM ubuntu 
 
-# ----------------------
 # Environtment Variables
-# ----------------------
 ENV TOOLS="/opt"
 ENV GO111MODULE=on
 ENV GOROOT=/usr/local/go
@@ -10,15 +8,11 @@ ENV GOPATH=/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:${PATH}
 ENV WORDLISTS="/usr/wordlists"
 
-# ----------------------
 # Create dirs
-# ----------------------
 RUN mkdir $WORDLISTS
 RUN mkdir ~/.gf
 
-# ----------------------
 # Install the Basics
-# ----------------------
 RUN apt-get update \ 
 	&& apt-get install -y \
 	curl \
@@ -32,25 +26,17 @@ RUN apt-get update \
 	vim \
 	wget 
 
-# ----------------------
 # Install Tools
-# ----------------------
 RUN apt-get update \
 	&& apt-get install -y \
 	nmap
 
-# ----------------------
 # Install go
-# ----------------------
 RUN wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz && \
 	tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz && \
 	rm -rf go1.15.6.linux-amd64.tar.gz
 
-
-# ----------------------
 # TOOLS
-# ----------------------
-
 
 # altdns
 #RUN pip3 install py-altdns
@@ -80,7 +66,6 @@ RUN go get -u github.com/tomnomnom/gf && \
 	#cd gf-secrets/ && \
 	#cp -a ~/.gf/ 
 	
-
 # gau
 RUN wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz && \
 	tar xvf gau_1.1.0_linux_amd64.tar.gz && \
@@ -121,10 +106,7 @@ RUN git clone https://github.com/m4ll0k/SecretFinder.git $TOOLS/secretfinder && 
 	cd $TOOLS/secretfinder && \
 	pip3 install -r requirements.txt
 
-# ----------------------
 # Wordlists
-# ----------------------
-
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-directories-lowercase.txt
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-medium-directories-lowercase.txt
@@ -132,8 +114,5 @@ RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-smal
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-files-lowercase.txt 
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-words-lowercase.txt
 
-# ----------------------
 # Config
-# ----------------------
-
 RUN wget -O ~/.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dot%20files/.vimrc
