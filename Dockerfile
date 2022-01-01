@@ -20,7 +20,7 @@ RUN apt-get update \
 	findutils \
 	git \
 	jq \
-	npm \
+	# npm \
 	python3 \
 	python3-pip \
 	ruby-dev \
