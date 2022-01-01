@@ -20,6 +20,7 @@ RUN apt-get update \
 	findutils \
 	git \
 	jq \
+	npm \
 	python3 \
 	python3-pip \
 	ruby-dev \
@@ -38,8 +39,10 @@ RUN wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz && \
 
 # TOOLS
 
-# altdns
-#RUN pip3 install py-altdns
+# arjun
+RUN git clone https://github.com/s0md3v/Arjun.git $TOOLS/arjun && \
+	cd $TOOLS/arjun && \
+	python3 setup.py install
 
 # amass
 RUN go get -v github.com/OWASP/Amass/v3/...
@@ -72,9 +75,6 @@ RUN wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd6
 	rm -rf tar xvf gau_1.1.0_linux_amd64.tar.gz && \
 	mv gau /usr/bin/gau
 
-# httpx
-RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx
-
 # IIS short name scanner
 RUN git clone https://github.com/irsdl/IIS-ShortName-Scanner.git $TOOLS/IIS-ShortName-Scanner
 
@@ -104,6 +104,11 @@ RUN git clone https://github.com/blechschmidt/massdns $TOOLS/massdns && \
 # secretfinder
 RUN git clone https://github.com/m4ll0k/SecretFinder.git $TOOLS/secretfinder && \
 	cd $TOOLS/secretfinder && \
+	pip3 install -r requirements.txt
+
+# snapper
+RUN git clone https://github.com/dxa4481/Snapper.git $TOOLS/snapper && \
+	cd $TOOLS/snapper && \
 	pip3 install -r requirements.txt
 
 # Wordlists
