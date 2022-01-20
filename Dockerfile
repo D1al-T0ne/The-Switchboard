@@ -56,9 +56,9 @@ RUN git clone https://github.com/maurosoria/dirsearch.git $TOOLS/dirsearch && \
 #	python3 setup.py install
 
 # eyewitness
-RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git $TOOLS/eyewitness && \
-	cd $TOOLS/eyewitnes/Python/setup && \
-	./setup.sh	
+RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git $TOOLS/eyewitness #&& \
+	#cd $TOOLS/eyewitnes/Python/setup && \
+	#./setup.sh	
 
 # ffuf
 RUN go get -u github.com/ffuf/ffuf
