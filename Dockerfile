@@ -33,16 +33,14 @@ RUN apt-get update \
 	nmap
 
 # Install go
-RUN wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz && \
-	tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz && \
-	rm -rf go1.15.6.linux-amd64.tar.gz
+RUN wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz && \
+	tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz && \
+	rm -rf go1.17.5.linux-amd64.tar.gz
 
 # TOOLS
 
 # arjun
-RUN git clone https://github.com/s0md3v/Arjun.git $TOOLS/arjun && \
-	cd $TOOLS/arjun && \
-	python3 setup.py install
+RUN pip3 install arjun
 
 # amass
 RUN go get -v github.com/OWASP/Amass/v3/...
@@ -57,9 +55,19 @@ RUN git clone https://github.com/maurosoria/dirsearch.git $TOOLS/dirsearch && \
 #	cd $TOOLS/dnsvalidator && \
 #	python3 setup.py install
 
+# eyewitness
+RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git $TOOLS/eyewitness && \
+	cd $TOOLS/eyewitnes/Python/setup && \
+	./setup.sh	
+
 # ffuf
 RUN go get -u github.com/ffuf/ffuf
 
+# gau
+RUN wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz && \
+	tar xvf gau_1.1.0_linux_amd64.tar.gz && \
+	rm -rf tar xvf gau_1.1.0_linux_amd64.tar.gz && \
+	mv gau /usr/bin/gau
 # gf
 RUN go get -u github.com/tomnomnom/gf && \
 	#cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf && \
@@ -68,12 +76,6 @@ RUN go get -u github.com/tomnomnom/gf && \
 	git clone https://github.com/dwisiswant0/gf-secrets
 	#cd gf-secrets/ && \
 	#cp -a ~/.gf/ 
-	
-# gau
-RUN wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz && \
-	tar xvf gau_1.1.0_linux_amd64.tar.gz && \
-	rm -rf tar xvf gau_1.1.0_linux_amd64.tar.gz && \
-	mv gau /usr/bin/gau
 
 # IIS short name scanner
 RUN git clone https://github.com/irsdl/IIS-ShortName-Scanner.git $TOOLS/IIS-ShortName-Scanner
@@ -96,20 +98,15 @@ RUN git clone https://github.com/blechschmidt/massdns $TOOLS/massdns && \
 	make
 
 # meg
-#RUN wget https://github.com/tomnomnom/meg/releases/download/v0.2.4/meg-linux-amd64-0.2.4.tgz && \
-#	tar xvf meg-linux-amd64-0.2.4.tgz && \
-#	rm -rf tar xvf meg-linux-amd64-0.2.4.tgz && \
-#	mv meg /usr/bin/meg
+RUN go get -u github.com/tomnomnom/meg
 
 # secretfinder
 RUN git clone https://github.com/m4ll0k/SecretFinder.git $TOOLS/secretfinder && \
 	cd $TOOLS/secretfinder && \
 	pip3 install -r requirements.txt
 
-# snapper
-RUN git clone https://github.com/dxa4481/Snapper.git $TOOLS/snapper && \
-	cd $TOOLS/snapper && \
-	pip3 install -r requirements.txt
+# unfurl
+RUN go get -u github.com/tomnomnom/unurl
 
 # Wordlists
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt
