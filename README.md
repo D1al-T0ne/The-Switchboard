@@ -22,6 +22,7 @@ alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --r
 | [arjun](https://github.com/s0md3v/Arjun) | Arjun is a tool for finding query parameters for URL endpoints. |
 | [amass](https://github.com/OWASP/Amass) | The OWASP Amass Project performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques. |
 | [dirsearch](https://github.com/maurosoria/dirsearch) | Dirsearch is a mature command-line tool designed to brute force directories and files in webservers. |
+| [eyewitness](https://github.com/FortyNorthSecurity/EyeWitness) | EyeWitness is designed to take screenshots of websites provide some server header info, and identify default credentials if known. |
 | [ffuf](https://github.com/ffuf/ffuf/blob/master/README.md) | FFUF is an Open Source web fuzzing tool, intended for discovering elements and content within web applciations, or web servers. |
 | [gau](https://github.com/lc/gau) | getallurls (gau) fetches known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain. Inspired by Tomnomnom's waybackurls.|
 | [gf](https://github.com/tomnomnom/gf) | A wrapper around grep to avoid typing common patterns. |
@@ -33,7 +34,7 @@ alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --r
 | [meg](https://github.com/tomnomnom/meg) | meg is a tool for fetching lots of URLs but still being 'nice' to servers. |
 | [nmap](https://nmap.org/) | Nmap is a free and open source utility for network security and auditing. |
 | [secrectfinder](https://github.com/m4ll0k/SecretFinder) | SecretFinder is a python script based on LinkFinder, written to discover sensitive data like apikeys, accesstoken, authorizations, jwt,..etc in JavaScript files. |
-| [snapper](https://github.com/dxa4481/Snapper) | A security tool for grabbing screenshots of many web hosts. This tool is useful after DNS enumeration or after enumerating web hosts via nmap or nessus. |
+| [unfurl](https://github.com/tomnomnom/unfurl) | Pull out bits of URLs provided on stdin |
 
 ## Todo
  - Create an alias file
