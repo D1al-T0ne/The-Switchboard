@@ -117,4 +117,4 @@ RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-larg
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-words-lowercase.txt
 
 # Config
-RUN wget https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
+RUN wget -O /.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
