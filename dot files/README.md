@@ -1,5 +1,4 @@
 ### dotfiles
-dotfiles for ubuntu.
 Use with Switchboard or configuring an Ubuntu system.
 
 ### Feedback
