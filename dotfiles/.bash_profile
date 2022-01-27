@@ -7,15 +7,15 @@ fi
 
 if
   [ -f ~/.exports ]; then
-    source ~/.bashrc
+    source ~/.exports
 fi
 
 if
   [ -f ~/.inputrc ]; then
-    source ~/.bashrc
+    source ~/.inputrc
 fi
 
 if
   [ -f ~/.bash_functions ]; then
-    source ~/.bashrc
+    source ~/.bash_functions
 fi
