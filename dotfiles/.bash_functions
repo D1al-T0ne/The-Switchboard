@@ -4,7 +4,7 @@ function wayback_urls() {
     GREEN="\033[1;32m"
     RESET="\033[0m"
 
-    gau $1 | sort -u | tee -a  wayback.txt
+    gau $1 | sort -u | tee -a  wayback.txt && echo -e "${GREEN}[*] Scraping for URLs.${RESET}"
     if [ -s wayback.txt ]
     then
 	echo -e "${GREEN}[*] No URLs were found.${RESET}"
