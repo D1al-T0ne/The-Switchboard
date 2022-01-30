@@ -6,6 +6,7 @@ sudo apt-get install -y \
 git \
 golang-go \
 pip \
+vim-gtk3
 
 # Color scheme
 sudo apt-get install dconf-cli
