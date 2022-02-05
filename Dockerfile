@@ -24,8 +24,9 @@ RUN apt-get update \
 	python3 \
 	python3-pip \
 	ruby-dev \
+	sqlmap \
 	vim \
-	wget 
+	wget \
 
 # Install Tools
 RUN apt-get update \
@@ -99,6 +100,9 @@ RUN git clone https://github.com/blechschmidt/massdns $TOOLS/massdns && \
 
 # meg
 RUN go get -u github.com/tomnomnom/meg
+
+# qsreplace
+RUN go get -u github.com/tomnomnom/qsreplace
 
 # secretfinder
 RUN git clone https://github.com/m4ll0k/SecretFinder.git $TOOLS/secretfinder && \
