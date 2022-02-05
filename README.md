@@ -33,7 +33,9 @@ alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --r
 | [massdns](https://github.com/blechschmidt/massdns) | MassDNS is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions. Without special configuration, MassDNS is capable of resolving over 350,000 names per second using publicly available resolvers. |
 | [meg](https://github.com/tomnomnom/meg) | meg is a tool for fetching lots of URLs but still being 'nice' to servers. |
 | [nmap](https://nmap.org/) | Nmap is a free and open source utility for network security and auditing. |
+| [qsreplace](https://github.com/tomnomnom/qsreplace) | Accept URLs on stdin, replace all query string values with a user-supplied value, only output each combination of query string parameters once per host and path. |
 | [secrectfinder](https://github.com/m4ll0k/SecretFinder) | SecretFinder is a python script based on LinkFinder, written to discover sensitive data like apikeys, accesstoken, authorizations, jwt,..etc in JavaScript files. |
+| [sqlmap](https://sqlmap.org/) | sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers. |
 | [unfurl](https://github.com/tomnomnom/unfurl) | Pull out bits of URLs provided on stdin |
 
 ## Todo
