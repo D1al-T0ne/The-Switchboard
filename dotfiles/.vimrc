@@ -1,4 +1,3 @@
-" This must be first, because it changes other options as a side effect.
 set nocompatible
 set shortmess=atI
 set noerrorbells
@@ -30,23 +29,16 @@ highlight ColorColumn ctermbg=0 guibg=white
 set nowrap
 set termwinsize=20x0
 
+" Indentation
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftround
+set expandtab
+
 filetype on
 
-" Vim-Plugged
-call plug#begin('~/.vim/plugged')
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'joshdick/onedark.vim'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'vim-airline/vim-airline'
-Plug 'jiangmiao/auto-pairs'
-call plug#end()
-
 set background=dark
-colorscheme onedark
-
-" Open url link in file
-nmap gx :silent execute "!firefox" . shellscape("<cWORD>")<CR>
 
 "File Tree Browser Settings
 let g:netrw_liststyle = 3
@@ -78,6 +70,3 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
-
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
