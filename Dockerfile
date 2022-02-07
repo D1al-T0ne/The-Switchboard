@@ -16,11 +16,9 @@ RUN mkdir ~/.gf
 RUN apt-get update \ 
 	&& apt-get install -y \
 	curl \
-	# default-jdk \
 	findutils \
 	git \
 	jq \
-	# npm \
 	python3 \
 	python3-pip \
 	ruby-dev \
@@ -39,7 +37,6 @@ RUN wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz && \
 	rm -rf go1.17.5.linux-amd64.tar.gz
 
 # TOOLS
-
 # arjun
 RUN pip3 install arjun
 
