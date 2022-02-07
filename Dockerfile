@@ -1,14 +1,18 @@
 FROM ubuntu 
 
 # Environtment Variables
-ENV TOOLS="/opt"
 ENV GO111MODULE=on
 ENV GOROOT=/usr/local/go
 ENV GOPATH=/go
 ENV PATH=${GOPATH}/bin:${GOROOT}/bin:${PATH}
+ENV DOTFILES="/dotfiles"
+ENV TOOLS="/opt"
 ENV WORDLISTS="/usr/wordlists"
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Create dirs
+RUN mkdir $DOTFILES
 RUN mkdir $WORDLISTS
 RUN mkdir ~/.gf
 
@@ -16,6 +20,8 @@ RUN mkdir ~/.gf
 RUN apt-get update \ 
 	&& apt-get install -y \
 	curl \
+	dnsutils \
+	findutils \
 	git \
 	jq \
 	nmap \
@@ -24,7 +30,8 @@ RUN apt-get update \
 	ruby-dev \
 	sqlmap \
 	vim \
-	wget \
+	vim-gtk3 \
+	wget 
 
 # Install go
 RUN wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz && \
@@ -113,4 +120,7 @@ RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-larg
 RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-large-words-lowercase.txt
 
 # Config
+RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.bashrc
+RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
+RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/setup.sh
 RUN wget -O /.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
