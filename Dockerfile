@@ -20,11 +20,13 @@ RUN mkdir ~/.gf
 RUN apt-get update \ 
 	&& apt-get install -y \
 	curl \
+	default-jdk \
 	dnsutils \
 	findutils \
 	git \
 	jq \
 	nmap \
+	npm \
 	python3 \
 	python3-pip \
 	ruby-dev \
@@ -123,4 +125,3 @@ RUN wget -P $WORDLISTS/ https://wordlists-cdn.assetnote.io/data/manual/raft-larg
 RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.bashrc
 RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
 RUN wget -P $DOTFILES/ https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/setup.sh
-RUN wget -O /.vimrc https://raw.githubusercontent.com/D1al-T0ne/The-Switchboard/master/dotfiles/.vimrc
