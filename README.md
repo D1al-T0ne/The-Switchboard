@@ -15,6 +15,8 @@ alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --r
 # "--it --rm swithchboard"
 # Running the image with "--rm" is away to keep things clean after the image is shutdown.
 ```
+Run the setup script in dotfiles folder to finish configuration.
+
 ## Tools
 
 | Tool | Description |
@@ -39,10 +41,10 @@ alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --r
 | [unfurl](https://github.com/tomnomnom/unfurl) | Pull out bits of URLs provided on stdin |
 
 ## Todo
- - Create an alias file
- - Add dotfiles
- - Update tool versions in Dockerfile
- - Wordlists
+ - Fix FFUF install
+ - Move GF-Patterns to .gf
+ - Add curlrc file
+ - Add README to script folder that describes each script.
 
 ### Feedback
 If you have any tips or improvement ideas I should be working on please let me [know.](https://github.com/D1al-T0ne/The-Switchboard/issues)
