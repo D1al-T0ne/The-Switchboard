@@ -16,20 +16,15 @@ RUN mkdir ~/.gf
 RUN apt-get update \ 
 	&& apt-get install -y \
 	curl \
-	findutils \
 	git \
 	jq \
+	nmap \
 	python3 \
 	python3-pip \
 	ruby-dev \
 	sqlmap \
 	vim \
 	wget \
-
-# Install Tools
-RUN apt-get update \
-	&& apt-get install -y \
-	nmap
 
 # Install go
 RUN wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz && \
