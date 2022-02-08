@@ -25,6 +25,10 @@ function digs() {
         dig +nocmd "$1"any +multiline +noall +answer;
 }
 
+if [ -f ~/.functions ]; then 
+  source ~/.functions
+fi
+
 # Prompt settings
 PS1="\[\e[1;35m\]\u" # username
 PS1+="\[\e[0;31m\] in \W -> "; # working directory
