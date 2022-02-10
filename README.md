@@ -1,21 +1,45 @@
 <h1 align="center"> The-Switchboard </h1>
 
-
 An Ubuntu image run in a  container, configured with a collection of tools and more for CTF-Challenges and Bug Bounty.
 
 ## Instructions
+1. Install [![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://https://docs.docker.com/get-docker/) on your machine.
+
+2. Create a directory to copy The-Switchboard code into (you can name it whatever you want).
+```bash
+mkdir switchboard
+```
+3. Move into the directory.
+```bash
+cd switchboard
+```
+4. Clone the repository.
+```bash
+git clone https://github.com/D1al-T0ne/The-Switchboard.git
+```
+5. You will need to build the image.
+```bash
+docker build -t switchboard .
+```
+Running this command with "-t" or "--tag" followed by a name will tag the image with this name. The "." is telling docker the Dockerfile is in the current directory to build from.<br>
+
+6. You then can run the image.
+```bash
+docker run -it switchboard
+```
+Running this command with "-it" allows for interactive processes (like a shell).
+
+## Notes:
 I created an alias to run the image.
 
 ```bash
 alias switchboard='cd ~/switchboard && docker run -v ~/switchboard:/srv/ -it --rm swithcboard'
-# "cd ~/switchboard"
-# Moves you into the directory "switchboard" (this must be created and have the Dockerfile).
-# "docker run. -v ~/switchboard:/srv/
-# This gives persistant storage.
-# "--it --rm swithchboard"
-# Running the image with "--rm" is away to keep things clean after the image is shutdown.
 ```
-Run the setup script in dotfiles folder to finish configuration.
+ Breaking down the alias.
+ - "cd ~/switchboard", moves you into the directory switchboard 
+ - "docker run. -v ~/switchboard:/srv/", this gives persistant storage.
+ - "--it --rm swithchboard", "--rm" is away to keep things clean after the image is shutdown.
+
 
 ## Tools
 
@@ -41,10 +65,8 @@ Run the setup script in dotfiles folder to finish configuration.
 | [unfurl](https://github.com/tomnomnom/unfurl) | Pull out bits of URLs provided on stdin |
 
 ## Todo
- - Fix FFUF install
- - Move GF-Patterns to .gf
+ - Finish setup.sh script to finsih some configurations for Bash, and Vim.
  - Add curlrc file
- - Add README to script folder that describes each script.
 
 ## Feedback
 If you have any tips or improvement ideas I should be working on please let me [know.](https://github.com/D1al-T0ne/The-Switchboard/issues)
