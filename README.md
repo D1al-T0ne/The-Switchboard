@@ -1,9 +1,7 @@
 <h1 align="center"> The-Switchboard </h1>
 
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://https://docker.com/)
 
-## Info
-An Ubuntu image run in a Docker container, with a collection of tools and more for CTF-Challenges and Bug Bounty.
+An Ubuntu image run in a  container, configured with a collection of tools and more for CTF-Challenges and Bug Bounty.
 
 ## Instructions
 I created an alias to run the image.
@@ -48,7 +46,7 @@ Run the setup script in dotfiles folder to finish configuration.
  - Add curlrc file
  - Add README to script folder that describes each script.
 
-### Feedback
+## Feedback
 If you have any tips or improvement ideas I should be working on please let me [know.](https://github.com/D1al-T0ne/The-Switchboard/issues)
 
----
+[![D1al T0ne](https://aleen42.github.io/badges/src/twitter.svg)](https://twitter.com/D1AL__T0NE)<br>
