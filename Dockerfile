@@ -52,11 +52,6 @@ RUN git clone https://github.com/maurosoria/dirsearch.git $TOOLS/dirsearch && \
 	cd $TOOLS/dirsearch && \
 	pip3 install -r requirements.txt
 
-# dnsvalidator
-#RUN git clone https://github.com/vortexau/dnsvalidator.git $TOOLS/dnsvalidator && \
-#	cd $TOOLS/dnsvalidator && \
-#	python3 setup.py install
-
 # eyewitness
 RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git $TOOLS/eyewitness #&& \
 	#cd $TOOLS/eyewitnes/Python/setup && \
@@ -70,14 +65,13 @@ RUN wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd6
 	tar xvf gau_1.1.0_linux_amd64.tar.gz && \
 	rm -rf tar xvf gau_1.1.0_linux_amd64.tar.gz && \
 	mv gau /usr/bin/gau
+	
 # gf
 RUN go get -u github.com/tomnomnom/gf && \
-	#cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf && \
 	git clone https://github.com/1ndianl33t/Gf-Patterns && \
-	mv /Gf-Patterns/*.json ~/.gf && \
+	cd /Gf-Patterns/ && \
+	mv *.json ~/.gf && \
 	git clone https://github.com/dwisiswant0/gf-secrets
-	#cd gf-secrets/ && \
-	#cp -a ~/.gf/ 
 
 # IIS short name scanner
 RUN git clone https://github.com/irsdl/IIS-ShortName-Scanner.git $TOOLS/IIS-ShortName-Scanner
