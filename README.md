@@ -1,4 +1,6 @@
-# The-Switchboard
+<h1 align="center"> The-Switchboard </h1>
+
+[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://https://docker.com/)
 
 ## Info
 An Ubuntu image run in a Docker container, with a collection of tools and more for CTF-Challenges and Bug Bounty.
